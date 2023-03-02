@@ -18,7 +18,10 @@ print("Прогноз погоды на неделю:")
 for i in data['list']:
     print("Дата <", i['dt_txt'], ">")
     print("Температура <",'{0:+3.0f}'.format(i['main']['temp']), ">")
-    print("Погодные условия <",i['weather'][0]['description'], ">")
+    print("Погодные условия <", i['weather'][0]['description'], ">")
     print("Скорость ветра <", i['wind']['speed'],">")
     print("Видимость <", i['visibility'],">")
     print("____________________________")
+
+
+print(res1)
