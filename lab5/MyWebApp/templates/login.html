@@ -5,26 +5,24 @@
     <title>Login</title>
   </head>
   <body>
-  <h1>Введите логин и пароль</h1>
-  <form action="" method="post">
-  <p>
-  <label for="username">Username</label>
-  <input type="text" name="username">
-  </p>
-  <p>
-  <label for="password">Password</label>
-  <input type="password" name="password">
-  </p>
-  <p>
-  <input type="submit" value="login" name="login">
-  <input type="submit" value="registration" name="registration">
-  </p>
-  {% if error %}
-  <p>{{error}}</p>
-  {% endif %}
-  {% if error1 %}
-  <p>{{error1}}</p>
-  {% endif %}
+    <h1>Введите логин и пароль</h1>
+    <form action="" method="post" autocomplete="off" autofocus>
+    <p>
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Ваш логин">
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Ваш пароль">
+    </p>
+    <p>
+      <input type="submit" value="login" name="login">
+      <input type="submit" value="registration" name="registration">
+      <input type="reset" value="clear">
+    </p>
+    {% if error %}
+    <p>{{error}}</p>
+    {% endif %}
   </form>
   </body>
 </html>
