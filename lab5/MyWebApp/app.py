@@ -19,7 +19,7 @@ def login():
             username = request.form.get('username')
             password = request.form.get('password')
             cursor.execute("SELECT * FROM service.users WHERE login=%s AND password=%s", (str(username), str(password)))
-            records = list(cursor.fetchall())
+            records = cursor.fetchall()
             if ' ' in str(username) or ' ' in str(password) or str(password) == "" or str(username) == "":
                 return render_template('login.html', error="Неправильный логин или пароль, запрещены символы пробела")
             if len(records) == 0:
